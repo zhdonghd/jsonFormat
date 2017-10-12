@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Demo</title>
+		<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+		<script src="./formJson.js"></script>
+		<style type="text/css">
+			#container p {
+				color: purple;
+			}
+			#container p .json-Boolean {
+				color: blue;
+			}
+			#container p .json-Number {
+				color: red;
+			}
+			#container p .json-String {
+				color: green;
+			}
+			#container p .json-Null {
+				color: orange;
+			}
+		</style>
+		<script>
+			$(function() {
+				var demo = '{"name":"中国","province":[{"name":"黑龙江","cities":{"city":["哈尔滨","大庆"]}},{"name":"广东","cities":{"city":["广州","深圳","珠海"]}},{"name":"台湾","cities":{"city":["台北","高雄"]}},{"name":"新疆","cities":{"city":["乌鲁木齐"]}}]}';
+				$("#container").html(generateRes(demo));
+			})
+		</script>
+	</head>
+	<body>
+		<div id="container">
+		</div>
+	</body>
+</html>
